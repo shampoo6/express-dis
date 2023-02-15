@@ -1,17 +1,17 @@
-import {get, inject, router} from "../../index";
+import { get, inject, router } from '../../index';
 
 @router('/user')
 export default class UserController {
-    @inject('TestController')
-    testController
+  @inject('TestController')
+  testController;
 
-    @inject('TestProvider')
-    testProvider
+  @inject('TestProvider')
+  testProvider;
 
-    @get('/readInject')
-    public async readInject(req, res) {
-        console.log(this.testController)
-        console.log(this.testProvider)
-        res.json({testController: this.testController, testProvider: this.testProvider})
-    }
+  @get('/readInject')
+  public async readInject(req, res) {
+    // console.log(this.testController);
+    // console.log(this.testProvider);
+    res.json({ testController: this.testController, testProvider: this.testProvider });
+  }
 }

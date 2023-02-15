@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "example": "tsc && node dist/example/test.js --cfg=src/example/edis.config.js",
+    "example": "tsc && node dist/example/example.js --cfg=src/example/edis.config.js",
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",

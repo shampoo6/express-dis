@@ -1,8 +1,8 @@
-import {provider} from "../../index";
+import { provider } from '../../index';
 
 @provider
 export default class TestProvider {
-    name = '张三'
-    sex = 'female'
-    age = 17
+  name = '张三';
+  sex = 'female';
+  age = 17;
 }

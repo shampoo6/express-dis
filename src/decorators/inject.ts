@@ -1,11 +1,11 @@
-import ObjectManager from "../core/ObjectManager";
-import {GlobalKey} from "../constants/GlobalKey";
+import ObjectManager from '../core/ObjectManager';
+import {GlobalKey} from '../constants/GlobalKey';
 
 export default function inject(className: string) {
-    return function (target: any, propName: string) {
-        const key = `${target.constructor.name}.${propName}`
+    return (target: any, propName: string) => {
+        const key = `${target.constructor.name}.${propName}`;
         global[GlobalKey.InjectMap].set(key, () => {
-            ObjectManager.getInstance().get(target.constructor.name)[propName] = ObjectManager.getInstance().get(className)
-        })
-    }
+            ObjectManager.getInstance().get(target.constructor.name)[propName] = ObjectManager.getInstance().get(className);
+        });
+    };
 }
