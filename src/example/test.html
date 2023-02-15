@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" onchange="onFileChange(event)">
+</body>
+<script>
+    function onFileChange(ev) {
+        const file = ev.target.files[0]
+        const fd = new FormData()
+        fd.append('file', file)
+        fetch('http://127.0.0.1:8080/test/upload', {
+            method: "post",
+            body: fd
+        }).then(res => res.json()).then(data => {
+            console.log(data)
+        })
+    }
+</script>
+</html>

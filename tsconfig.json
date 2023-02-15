@@ -1,0 +1,18 @@
+{
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2016",
+    "declaration": true,
+    "declarationDir": "./lib",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*"
+  ]
+}
