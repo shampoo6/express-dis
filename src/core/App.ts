@@ -103,7 +103,8 @@ export default class App {
     }
 
     public listen(port: number, callback: () => void): void {
-        this.errorHandler && this.e.use(this.errorHandler);
+        if (this.errorHandler)
+            this.e.use(this.errorHandler);
         this.e.listen(port, callback);
     }
 }
