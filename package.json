@@ -1,6 +1,6 @@
 {
   "name": "express-dis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is a express dependency injection server",
   "main": "dist/index.js",
   "types": "lib/index.d.ts",
